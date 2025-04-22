@@ -1,13 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Earth from "@/components/Earth";
+import LoginForm from "@/components/LoginForm";
+import SpaceBackground from "@/components/SpaceBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <>
+      {/* Fundo espacial com gradiente e cometas */}
+      <SpaceBackground />
+      
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="container flex flex-col md:flex-row items-center justify-center gap-12 px-4 py-8">
+          {/* Planeta Terra à esquerda */}
+          <div className="flex-shrink-0 order-2 md:order-1">
+            <Earth />
+          </div>
+          
+          {/* Formulário de login à direita */}
+          <div className="order-1 md:order-2">
+            <LoginForm />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
